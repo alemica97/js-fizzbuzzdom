@@ -1,24 +1,44 @@
+html{
+    font-family: 'Roboto', sans-serif;
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+body{
+    background-color: #083B4C;
+}
+
 ul, ol{
     list-style: none;
 }
 
-.row{
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+h1{
+    text-align: center;
+    font-size: 80px;
+    font-weight: 700;
+    padding: 80px;
+    color: white;
 }
 
-.col{
-    width: 80px;
-    height: 80px;
+#container{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 1000px;
+    gap: 20px;
+}
+
+.list-item{
+    width: 12%;
+    height: 120px;
+    line-height: 120px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 500;
 }
 
 .green{
