@@ -6,18 +6,25 @@ console.log(list);
 for(let i = 1; i <= 100; i++){
     //ad ogni iterazione mi creo un elemento html 
     let listElement = document.createElement('li');
-    console.log(listElement);
-    listElement.append(i); // "appendo" ogni <li> al <ul> dell'HTML
-    list.append(listElement);
+    listElement.classList.add('col');
     //Se il numero è un multiplo di 3, invece del numero stampa 'Fizz'
     //Per dire che un numero è multiplo di 3 devo usare il modulo % di 3 = 0
-    // if( i % 3 === 0){
-    //     console.log('Fizz');
-    // }else if( i % 5 === 0){
-    //     console.log('Buzz');
-    // }else if( i % 15 === 0){
-    //     console.log('FizzBuzz');
-    // }
+    if( i % 15 === 0){
+        listElement.append('FizzBuzz');
+        listElement.classList.add('red');
+    }else if( i % 5 === 0){
+        listElement.append('Buzz');
+        listElement.classList.add('yellow');
+    }else if( i % 3 === 0){
+        listElement.append('Fizz');
+        listElement.classList.add('green');
+    }else{
+        listElement.append(i); // "appendo" ogni <li> al <ul> dell'HTML
+        listElement.classList.add('blue');
+    }
+    
+    console.log(listElement); 
+    list.append(listElement);
 
     // console.log(i);
 }
