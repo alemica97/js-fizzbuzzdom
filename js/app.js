@@ -4,10 +4,11 @@ console.log(list);
 
 //provo a stampare in console i numeri da 1 a 100 con un ciclo for, per vedere se funziona
 for(let i = 1; i <= 100; i++){
-    //ad ogni iterazione mi creo un elemento html con la specifica classe
+    //ad ogni iterazione mi creo un elemento html 
     let listElement = document.createElement('li');
     console.log(listElement);
-    list.append( listElement );
+    listElement.append(i); // "appendo" ogni <li> al <ul> dell'HTML
+    list.append(listElement);
     //Se il numero è un multiplo di 3, invece del numero stampa 'Fizz'
     //Per dire che un numero è multiplo di 3 devo usare il modulo % di 3 = 0
     // if( i % 3 === 0){
